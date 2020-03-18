@@ -1,0 +1,185 @@
+// stylesheet :: default post template styles
+
+    // settings
+    $pagebase : #E5E7E7;
+
+    // styles
+    .post-template-default {
+
+        font-size: 1rem;
+
+        @include color( $app05, 0.245 );
+
+        @include fill( $sec_temp_off_white, 0.000 );
+        @include fill( $pagebase, 0.000 );
+
+        // site layout
+        #site-layout {
+
+            @include fill( white, 1.000 );
+
+            background: {
+
+                image: none;
+
+            }
+
+        }
+
+        // header
+        .post-header {
+
+            padding: 9rem 8vw 0 8vw;
+
+            // h1
+            h1 {
+
+                margin: 0 auto 0 auto;
+
+            }
+
+        }
+
+        // content
+        .post-content {
+
+            padding: 2rem 8vw 2rem 8vw;
+
+        }
+
+        // controls
+        #news_controls {
+
+            padding: 2rem 8vw 4rem 8vw;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                // @include hide;
+
+                order: 20;
+
+            }
+
+            // taxonomy filters
+            #news_taxonomy {
+
+                margin: 0 0 3rem 0;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    margin: 0 0 0 0;
+
+                }
+
+                // title
+                .metadata_title {
+
+                    display: block;
+
+                    // margin: 0 0 0.75rem 0;
+                    margin: 0 0 0.25rem 0;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include text( $up );
+
+                    @include typo( 1rem, 0.045em );
+
+                    @include color( $app05, 0.265 );
+
+                }
+
+                // common
+                .metadata {
+
+                    // mobile
+                    @include breakpoint ( medium down ) {
+
+                        // last child
+                        &:last-child {
+
+                            margin: 0 0 0 0;
+
+                        }
+
+                    }
+
+                    // group
+                    .taxonomy_group {
+
+                        @include flex-h-s-v-st( false );
+
+                        flex-wrap: wrap;
+
+                        // tags
+                        .taxonomy_item {
+
+                            @include flex-h-c-v-c( true );
+
+                            height: 2rem;
+                            // margin: 0 0.5rem 0.5rem 0;
+                            margin: 0.5rem 0.5rem 0 0;
+                            padding: 0.625rem 0.75rem 0.5rem 0.75rem;
+
+                            @include font( $industry, 0.6875rem, 600 );
+
+                            @include text( lowercase );
+
+                            @include typo( 0.875rem, 0.035em );
+
+                            @include color( white, 0.000 );
+
+                            @include fill( $g135, 0.000 );
+
+                            transition: $all220;
+
+                            @include shadowbox( 1rem, 3rem, black, 0.465 );
+
+                            // hover state
+                            &:hover {
+
+                                @include color( white, 0.000 );
+
+                                @include fill( $campaign, 0.000 );
+
+                            }
+
+                        }
+
+                    }
+
+                    // description
+                    &.description {
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            @include hide;
+
+                        }
+
+                    }
+
+                    // topics
+                    &.topics {
+
+                        margin: 0 0 2rem 0;
+
+                    }
+
+                    // tags
+                    &.tags {
+
+                        //
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

@@ -1,0 +1,12 @@
+// stylesheet :: GDPR consent styles
+
+    // settings
+    $gdpr : 1rem;
+
+    // styles
+    #gdpr_consent {
+
+        @include fill( $dark );
+        // @include hide;
+
+    }

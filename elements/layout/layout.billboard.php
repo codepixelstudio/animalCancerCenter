@@ -1,7 +1,8 @@
 <?php
 
     // options group
-    $billboard_config = get_field( 'billboard_config', 'options' );
+    // $billboard_config = get_field( 'billboard_config', 'options' );
+    $billboard_config = get_field( 'billboard_config' );
 
     // billboard class
     if ( $billboard_config ) {
@@ -15,10 +16,12 @@
     }
 
     // slideshow content
-    $slides = get_field( 'slideshow', 'options' );
+    // $slides = get_field( 'slideshow', 'options' );
+    $slides = get_field( 'slideshow' );
 
     // video content
-    $video = get_field( 'video', 'options' );
+    // $video = get_field( 'video', 'options' );
+    $video = get_field( 'video' );
 
 ?>
 

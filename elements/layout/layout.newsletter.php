@@ -11,7 +11,7 @@
     <!-- END subheading -->
 
     <!-- heading -->
-    <h2 class="heading">
+    <h2 class="heading" data-open="gdpr_consent">
 
         join our mailing list
 
@@ -68,7 +68,7 @@
 
             <a class="privacy_link" href="#">
 
-                Priavcy Policy
+                Privacy Policy
 
             </a>
 

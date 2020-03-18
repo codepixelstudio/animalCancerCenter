@@ -16,7 +16,7 @@
         // height: calc( 50vh + 5rem );
         height: $slideshow_default;
 
-        @include shadowbox( 1rem, 4rem, black, 0.565 );
+        // @include shadowbox( 1rem, 4rem, black, 0.565 );
 
         // mobile
         @include breakpoint ( small only ) {
@@ -66,8 +66,9 @@
 
                 position: absolute;
 
+                top: 10rem;
                 right: 5rem;
-                bottom: 5rem;
+                // bottom: 5rem;
 
                 z-index: 100;
 
@@ -75,6 +76,14 @@
                 height: 4rem;
 
                 @include shadowbox( 1rem, 3.5rem, black, 0.425 );
+
+                // mobile
+                @include breakpoint ( medium down ) {
+
+                    top: 8rem;
+                    right: 3rem;
+
+                }
 
                 // mobile
                 @include breakpoint ( small only ) {
@@ -90,7 +99,8 @@
 
                 position: absolute;
 
-                bottom: 5rem;
+                top: 10rem;
+                // bottom: 5rem;
 
                 z-index: 200;
 
@@ -104,6 +114,13 @@
                 @include fill( $dark, 0.565 );
 
                 transition: $all220;
+
+                // mobile
+                @include breakpoint ( medium down ) {
+
+                    top: 8rem;
+
+                }
 
                 // mobile
                 @include breakpoint ( small only ) {
@@ -132,6 +149,13 @@
 
                     @include fill( $g140, 0.265 );
 
+                    // mobile
+                    @include breakpoint ( medium down ) {
+
+                        right: 3rem;
+
+                    }
+
                 }
 
                 // previous arrow
@@ -140,6 +164,13 @@
                     right: 9rem;
 
                     @include fill( $g135, 0.265 );
+
+                    // mobile
+                    @include breakpoint ( medium down ) {
+
+                        right: 7rem;
+
+                    }
 
                 }
 
@@ -175,9 +206,18 @@
                 list-style: none;
 
                 // mobile
+                @include breakpoint ( medium down ) {
+
+                    bottom: 3rem;
+                    left: 2.75rem;
+
+                }
+
+                // mobile
                 @include breakpoint ( small only ) {
 
                     bottom: 1rem;
+                    left: auto;
 
                 }
 
@@ -360,9 +400,17 @@
 
                     z-index: 20;
 
-                    @include flex-v-b-h-s( false );
+                    // @include flex-v-b-h-s( false );
+                    @include flex-v-b-h-e( false );
 
                     padding: 5rem 5rem 5rem 5rem;
+
+                    // mobile
+                    @include breakpoint ( medium down ) {
+
+                        padding: 3rem 3rem 3rem 3rem;
+
+                    }
 
                     // mobile
                     @include breakpoint ( small only ) {
@@ -394,7 +442,7 @@
                             // mobile
                             @include breakpoint ( medium only ) {
 
-                                font-size: 3rem;
+                                font-size: 2.5rem;
 
                             }
 

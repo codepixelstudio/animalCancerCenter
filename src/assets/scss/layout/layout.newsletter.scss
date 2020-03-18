@@ -258,6 +258,13 @@
 
                     @include shadowbox( 1rem, 3rem, black, 0.565 );
 
+                    // focus state
+                    &:focus {
+
+                        @include fill( $dark, 0.000 );
+
+                    }
+
                     // placeholder
                     &::placeholder {
 
