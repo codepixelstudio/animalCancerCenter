@@ -26,15 +26,92 @@
 
         }
 
-        // header
-        .post-header {
+        // article
+        article.post {
 
-            padding: 9rem 8vw 0 8vw;
+            // padding: 9rem 8vw 0 8vw;
+
+        }
+
+        // header
+        .entry_header {
+
+            // padding: 9rem 8vw 0 8vw;
+            padding: 0 0 0 0;
+
+            // image
+            .entry_image {
+
+                height: 24rem;
+
+                background: {
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                // mobile
+                @include breakpoint ( medium up ) {
+
+                    height: 32rem;
+
+                }
+
+                // mobile
+                @include breakpoint ( xlarge ) {
+
+                    height: 50vh;
+
+                }
+
+            }
 
             // h1
-            h1 {
+            .entry_title {
 
-                margin: 0 auto 0 auto;
+                margin: 0 0 0 0;
+                padding: 5rem 5rem 1.5rem 5rem;
+
+                // @include color( $roarange );
+
+                // mobile
+                @include breakpoint ( xlarge ) {
+
+                    padding: 5rem 10vw 1.5rem 10vw;
+
+                }
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    padding: 3rem 3rem 1.5rem 3rem;
+
+                }
+
+            }
+
+            // meta
+            .entry_metadata {
+
+                padding: 0 5rem 0 5rem;
+
+                @include font( $industry, 0.875rem, 700 );
+
+                // mobile
+                @include breakpoint ( xlarge ) {
+
+                    padding: 0 10vw 0 10vw;
+
+                }
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    padding: 0 3rem 0 3rem;
+
+                }
 
             }
 
@@ -43,14 +120,47 @@
         // content
         .post-content {
 
-            padding: 2rem 8vw 2rem 8vw;
+            padding: 2rem 5rem 2rem 5rem;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 2rem 3rem 1.5rem 3rem;
+
+            }
+
+            // mobile
+            @include breakpoint ( xlarge ) {
+
+                padding: 2rem 10vw 2rem 10vw;
+
+            }
+
+            // text
+            p {
+
+                // last child
+                &:last-child {
+
+                    margin: 0 0 0 0;
+
+                }
+
+            }
 
         }
 
         // controls
         #news_controls {
 
-            padding: 2rem 8vw 4rem 8vw;
+            padding: 2rem 5rem 5rem 5rem;
+
+            // mobile
+            @include breakpoint ( xlarge ) {
+
+                padding: 2rem 10vw 5rem 10vw;
+
+            }
 
             // mobile
             @include breakpoint ( small only ) {
@@ -59,12 +169,14 @@
 
                 order: 20;
 
+                padding: 1.5rem 3rem 3rem 3rem;
+
             }
 
             // taxonomy filters
             #news_taxonomy {
 
-                margin: 0 0 3rem 0;
+                // margin: 0 0 3rem 0;
 
                 // mobile
                 @include breakpoint ( small only ) {

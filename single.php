@@ -35,95 +35,136 @@
 <!-- site.layout -->
 <main id="site-layout" class="off-canvas-content default" data-off-canvas-content style="background-image:url(<?php echo $place_image; ?>);" data-template="parent">
 
-	<!-- content container -->
-	<div class="content-container">
+	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+	<?php // post vars
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		$category = get_the_category();
+		$author   = get_the_author();
+		$publish  = get_the_date();
+		$image    = has_post_thumbnail() ? 'style="background-image:url(' . get_the_post_thumbnail_url( get_the_id(), 'x-large' ) . ');"' : '';
 
-			<div class="post-header">
+	?>
 
-				<h1 class="entry-title">
+	<!-- article -->
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<?php the_title(); ?>
+		<!-- header -->
+		<header class="entry_header">
 
-				</h1>
+			<!-- image -->
+			<div class="entry_image" <?php echo $image; ?>>
+
+				<!--  -->
 
 			</div>
+			<!-- END image -->
 
-			<div class="post-content">
+			<!-- title -->
+			<h1 class="entry_title">
 
-				<?php the_content(); ?>
+				<?php the_title(); ?>
+
+			</h1>
+			<!-- END title -->
+
+			<!-- metadata -->
+			<div class="entry_metadata">
+
+				<!-- author -->
+				<span class="author">
+
+					<?php echo $author; ?>
+
+				</span>
+				<!-- END author -->
+
+				&nbsp;|&nbsp;
+
+				<!-- date -->
+				<span class="date">
+
+					<?php echo $publish; ?>
+
+				</span>
+				<!-- END date -->
 
 			</div>
+			<!-- END metadata -->
 
-			<!-- news navigation -->
-	        <div id="news_controls" class="news_navigation">
+		</header>
+		<!-- END header -->
 
-	            <!-- navigation -->
-	            <aside id="news_taxonomy">
+		<div class="post-content">
 
-	                <!-- metadata group -->
-	                <section class="metadata topics">
+			<?php the_content(); ?>
 
-	                    <!-- title -->
-	                    <span class="metadata_title">
+		</div>
 
-	                        browse articles by topic
+		<!-- news navigation -->
+        <div id="news_controls" class="news_navigation">
 
-	                    </span>
-	                    <!-- END title -->
+            <!-- navigation -->
+            <aside id="news_taxonomy">
 
-	                    <!-- taxonomy group -->
-	                    <div class="taxonomy_group">
+                <!-- metadata group -->
+                <section class="metadata topics">
 
-	                        <?php get_template_part( 'elements/news/news.topics' ); ?>
+                    <!-- title -->
+                    <span class="metadata_title">
 
-	                    </div>
-	                    <!-- END taxonomy group -->
+                        browse articles by topic
 
-	                </section>
-	                <!-- END metadata group -->
+                    </span>
+                    <!-- END title -->
 
-	                <!-- metadata group -->
-	                <section class="metadata tags">
+                    <!-- taxonomy group -->
+                    <div class="taxonomy_group">
 
-	                    <!-- title -->
-	                    <span class="metadata_title">
+                        <?php get_template_part( 'elements/news/news.topics' ); ?>
 
-	                        browse articles by tag
+                    </div>
+                    <!-- END taxonomy group -->
 
-	                    </span>
-	                    <!-- END title -->
+                </section>
+                <!-- END metadata group -->
 
-	                    <!-- taxonomy group -->
-	                    <div class="taxonomy_group">
+                <!-- metadata group -->
+                <section class="metadata tags">
 
-	                        <?php get_template_part( 'elements/news/news.tags' ); ?>
+                    <!-- title -->
+                    <span class="metadata_title">
 
-	                    </div>
-	                    <!-- END taxonomy group -->
+                        browse articles by tag
 
-	                </section>
-	                <!-- END metadata group -->
+                    </span>
+                    <!-- END title -->
 
-	            </aside>
-	            <!-- END navigation -->
+                    <!-- taxonomy group -->
+                    <div class="taxonomy_group">
 
-	        </div>
-	        <!-- END news navigation -->
+                        <?php get_template_part( 'elements/news/news.tags' ); ?>
 
-		</article><!-- #post-<?php the_ID(); ?> -->
+                    </div>
+                    <!-- END taxonomy group -->
 
-		<?php endwhile; ?>
+                </section>
+                <!-- END metadata group -->
 
-		<?php get_template_part( 'elements/layout/layout.footer' ); ?>
+            </aside>
+            <!-- END navigation -->
 
-	</div>
-	<!-- END content container -->
+        </div>
+        <!-- END news navigation -->
+
+	</article>
+	<!-- #post-<?php the_ID(); ?> -->
+
+	<?php endwhile; ?>
 
 </main>
 <!-- site.layout -->
+
+<?php get_template_part( 'elements/layout/layout.footer' ); ?>
 
 <?php get_footer(); ?>
