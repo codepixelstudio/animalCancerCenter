@@ -18,6 +18,18 @@
     </h2>
     <!-- END heading -->
 
+    <!-- construct -->
+    <div id="newsletter_signup_form_build">
+
+        <!-- <script type="text/javascript">
+            var loc = "http://cdwebit.cvmbs.colostate.edu/colostateedu-avuv6/pages/";
+        </script>
+        <script type="text/javascript" src="https://az124611.vo.msecnd.net/web/v10/CDWidget.js"></script>
+        <div pageID="rka4trdeeqoeqanooqtjw"></div> -->
+
+    </div>
+    <!-- END construct -->
+
     <!-- form -->
     <form id="newsletter_signup_form" action="" method="post">
 

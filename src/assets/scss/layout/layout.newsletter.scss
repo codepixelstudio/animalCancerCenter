@@ -79,6 +79,13 @@
 
         }
 
+        // construct
+        #newsletter_signup_form_build {
+
+            @include hide;
+
+        }
+
         // form
         #newsletter_signup_form {
 
