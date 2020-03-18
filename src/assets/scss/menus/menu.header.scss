@@ -44,7 +44,6 @@
                 @include flex-h-c-v-c( true );
 
                 width: auto;
-                // height: 2rem;
 
                 // nested
                 &.menu-item-has-children {
@@ -53,6 +52,8 @@
                     a {
 
                         position: relative;
+
+                        z-index: 200;
 
                         // padding-right: 1.5rem;
 
@@ -74,6 +75,18 @@
                             @include hide;
 
                         }
+
+                    }
+
+                }
+
+                // opens right
+                &.opens-right {
+
+                    // submenu
+                    .submenu {
+
+                        left: 0;
 
                     }
 
@@ -104,9 +117,11 @@
                 &.is-active {
 
                     // links
-                    a {
+                    > a {
 
-                        @include fill( transparent );
+                        @include color( $gold );
+
+                        @include fill( $g135 );
 
                     }
 
@@ -140,7 +155,7 @@
                         @include color( $gold, 0.000 );
 
                         @include fill( white, 0.925 );
-                        // @include fill( $g140, 0.000 );
+                        @include fill( $g135, 0.185 );
 
                     }
 
@@ -169,15 +184,49 @@
                 .submenu {
 
                     top: 2rem;
-                    // right: auto;
-                    // left: 0;
 
-                    @include fill( red, 0.000 );
+                    border: none;
+
+                    @include fill( $g135, 0.075 );
+
+                    @include shadowbox( 1rem, 3rem, black, 0.685 );
+
+                    // mobile
+                    @include breakpoint ( xlarge ) {
+
+                        top: 3rem;
+
+                    }
 
                     // active
                     &.js-dropdown-active {
 
                         //
+
+                    }
+
+                    // item
+                    .menu-item {
+
+                        @include flex-h-s-v-c( false );
+
+                        // link
+                        a {
+
+                            @include flex-h-s-v-c( false );
+
+                            width: 100%;
+
+                            // hover state
+                            &:hover {
+
+                                // @include color( white );
+
+                                @include fill( $dark, 0.465 );
+
+                            }
+
+                        }
 
                     }
 
