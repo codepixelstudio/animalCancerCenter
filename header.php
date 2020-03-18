@@ -24,9 +24,9 @@
 
 			<link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/>
 
-			<script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script>
+			<!-- <script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script> -->
 
-			<script>
+			<!-- <script>
 
 				window.addEventListener( "load", function(){
 
@@ -59,7 +59,7 @@
 
 				});
 
-			</script>
+			</script> -->
 
 			<?php wp_head(); ?>
 
