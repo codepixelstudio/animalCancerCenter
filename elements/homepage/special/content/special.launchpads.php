@@ -38,7 +38,7 @@
 ?>
 
 <!-- launchpads -->
-<section class="homepage-section launchpads <?php echo $layout; ?>">
+<section class="homepage-section">
 
     <!-- pattern -->
     <div class="pattern-overlay">
@@ -48,16 +48,24 @@
     </div>
     <!-- END pattern -->
 
-    <?php
+    <!-- launchpads -->
+    <div class="launchpads <?php echo $layout; ?>">
 
-        foreach ( $launchpads as $launchpad ) {
+    <?php foreach( $launchpads as $launchpad ) : ?>
 
-            // echo '<a class="launchpad" href="' . $launchpad[ 'link' ] . '" style="background-image:url(' . $launchpad[ 'image' ] . ')"><span class="image" " style="background-image:url(' . $launchpad[ 'image' ] . ')"></span><span class="title">' . $launchpad[ 'title' ] . '</span></a>';
-            echo '<a class="launchpad" href="' . $launchpad[ 'link' ] . '"><span class="image" " style="background-image:url(' . $launchpad[ 'image' ] . ')"></span><span class="title">' . $launchpad[ 'title' ] . '</span></a>';
+        <?php if ( $launchpad[ 'sticky' ] ) {
 
-        }
+            $stickiness = 'sticky';
+            $indicator  = '<span class="indicator"></span>';
 
-    ?>
+        } else { $stickiness = 'default'; } ?>
+
+        <?php echo '<a class="launchpad ' . $stickiness . '" href="' . $launchpad[ 'link' ] . '" style="background-image:url(' . $launchpad[ 'image' ] . ')">' . $indicator . '<span class="title">' . $launchpad[ 'title' ] . '</span></a>'; ?>
+
+    <?php endforeach; ?>
+
+    </div>
+    <!-- END launchpads -->
 
 </section>
 <!-- END launchpads -->

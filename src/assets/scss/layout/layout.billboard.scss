@@ -13,10 +13,7 @@
 
         @include flex-h-c-v-c( false );
 
-        // height: calc( 50vh + 5rem );
         height: $slideshow_default;
-
-        // @include shadowbox( 1rem, 4rem, black, 0.565 );
 
         // mobile
         @include breakpoint ( small only ) {
@@ -29,7 +26,6 @@
         // mobile
         @include breakpoint ( large up ) {
 
-            // height: calc( 65vh + 5rem );
             height: $slideshow_large;
 
         }
@@ -328,7 +324,7 @@
 
                             background: {
 
-                                image: url(../img/billboard.03.jpg);
+                                // image: url(../img/billboard.03.jpg);
                                 repeat: no-repeat;
                                 size: cover;
                                 position: center center;
@@ -367,7 +363,8 @@
                                 @include gradient(
 
                                     0deg,
-                                    $dark, 0.385, 0%,
+                                    // $dark, 0.385, 0%,
+                                    $dark, 0.185, 0%,
                                     transparent, 1.000, 100%
 
                                 );
@@ -377,7 +374,7 @@
                             // after
                             &:after {
 
-                                z-index: 20;
+                                z-index: 0;
 
                                 @include gradient(
 

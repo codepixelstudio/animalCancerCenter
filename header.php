@@ -65,11 +65,7 @@
 
 		</head>
 
-		<?php
-
-			$site_type = get_field( 'site_type', 'options' );
-
-		?>
+		<?php $site_type = get_field( 'site_type', 'options' ); ?>
 
 		<body <?php body_class(); ?> data-site-type="<?php echo $site_type; ?>">
 
