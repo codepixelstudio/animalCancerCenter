@@ -5,6 +5,7 @@
     $slideshow_default : calc( 50vh + 5rem );
     $slideshow_small   : calc( 60vh + 4rem );
     $slideshow_large   : calc( 65vh + 5rem );
+    $slideshow_random  : 40rem;
 
     // styles
     #custom_billboard {
@@ -847,6 +848,51 @@
                         }
 
                     }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    // random MQ
+    @media screen and ( max-height: 40rem ) {
+
+        // billboard
+        #custom_billboard {
+
+            height: $slideshow_random;
+
+            // slideshow
+            &.slideshow {
+
+                // slides
+                .slideshow_slides {
+
+                    height: $slideshow_random;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        height: $slideshow_random;
+
+                    }
+
+                    // mobile
+                    @include breakpoint ( large up ) {
+
+                        height: $slideshow_random;
+
+                    }
+
+                }
+
+                // slide
+                .slideshow_slide {
+
+                    height: $slideshow_random;
 
                 }
 
