@@ -11,12 +11,20 @@
     <!-- END subheading -->
 
     <!-- heading -->
-    <h2 class="heading" data-open="gdpr_consent">
+    <h2 class="heading">
 
-        join our mailing list
+        join our community
 
     </h2>
     <!-- END heading -->
+
+    <!-- text -->
+    <span class="small_text">
+
+        Be among the first to learn the latest Flint Animal Cancer Center news and pet cancer treatment information.
+
+    </span>
+    <!-- END text -->
 
     <!-- construct -->
     <div id="newsletter_signup_form_build">
@@ -30,81 +38,85 @@
     </div>
     <!-- END construct -->
 
-    <!-- form -->
-    <form id="newsletter_signup_form" action="" method="post">
+    <!-- construct -->
+    <div id="newsletter_signup_form_demo">
 
-        <!-- container -->
-        <div id="input_fields" class="form_fields">
+        <?php // gravity_form( 1, false, false, true, '', true ); ?>
 
-            <!-- wrap -->
-            <span class="input_wrap input_name">
+    </div>
+    <!-- END construct -->
 
-                <label for="full_name">full name</label>
-                <input id="full_name" class="text" type="text" name="name" value="" placeholder="full name">
+<!-- form -->
+<form id="newsletter_signup_form" action="//analytics.clickdimensions.com/forms/h/ayQd97WXAQEuorRFKFsijP" method="post">
+<!-- <form id="newsletter_signup_form" action="//analytics.clickdimensions.com/forms/h/ayQd97WXAQEuorRFKFsijP" method="post"> -->
 
-            </span>
-            <!-- END wrap -->
+    <!-- container -->
+    <div id="input_fields" class="form_fields">
 
-            <!-- wrap -->
-            <span class="input_wrap input_email">
+        <!-- wrap -->
+        <span class="input_wrap input_first_name">
 
-                <label for="email">e-mail address</label>
-                <input id="email" class="text" type="text" name="name" value="" placeholder="e-mail address">
+            <label for="First Name">first name</label>
+            <input id="First Name" class="text" type="text" name="First Name" value="" placeholder="first name" required>
 
-            </span>
-            <!-- END wrap -->
+        </span>
+        <!-- END wrap -->
 
-            <!-- wrap -->
-            <span class="input_wrap input_phone">
+        <!-- wrap -->
+        <span class="input_wrap input_last_name">
 
-                <label for="phone">phone number [optional]</label>
-                <input id="phone" class="text" type="text" name="name" value="" placeholder="phone number [optional]">
+            <label for="Last Name">last name</label>
+            <input id="Last Name" class="text" type="text" name="Last Name" value="" placeholder="last name" required>
 
-            </span>
-            <!-- END wrap -->
+        </span>
+        <!-- END wrap -->
 
-        </div>
-        <!-- END container -->
+        <!-- wrap -->
+        <span class="input_wrap input_email">
 
-        <!-- container -->
-        <div id="terms_fields" class="form_fields">
+            <label for="email">e-mail address</label>
+            <input id="email" class="text" type="email" name="email" value="" placeholder="e-mail address" required>
 
-            <input id="terms" type="checkbox" name="terms" value="">
-            <label for="terms">Yes, please add me to the CSU Animal Cancer Center mailing list.</label>
+        </span>
+        <!-- END wrap -->
 
-        </div>
-        <!-- END container -->
+    </div>
+    <!-- END container -->
 
-        <!-- privacy links -->
-        <div id="policy_fields" class="form_fields">
+    <!-- container -->
+    <div id="terms_fields" class="form_fields">
 
-            <a class="privacy_link" href="#">
+        <input id="terms" type="checkbox" name="terms" value="">
+        <label for="terms">Yes, please add me to the CSU Animal Cancer Center mailing list.</label>
 
-                Privacy Policy
+    </div>
+    <!-- END container -->
 
-            </a>
+    <!-- privacy links -->
+    <div id="policy_fields" class="form_fields">
 
-            |
+        <a class="privacy_link" href="<?php echo home_url(); ?>/privacy-statement">
 
-            <a class="privacy_link" href="#">
+            Privacy Statement
 
-                GDPR FAQ
+        </a>
 
-            </a>
+        <!-- |
 
-        </div>
-        <!-- END privacy links -->
+        <a class="privacy_link" href="<?php echo home_url(); ?>/gdpr-faq">
 
-        <!-- button -->
-        <button id="newsletter_signup_submit" type="button" name="button">
+            GDPR FAQ
 
-            add me to the mailing list
+        </a> -->
 
-        </button>
-        <!-- END button -->
+    </div>
+    <!-- END privacy links -->
 
-    </form>
-    <!-- END form -->
+    <!-- submit -->
+    <input id="newsletter_signup_submit" type="submit" value="add me to the mailing list">
+
+</form>
+<!-- END form -->
 
 </section>
 <!-- END newsletter -->

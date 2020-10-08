@@ -1,0 +1,109 @@
+// stylesheet :: icon box styles
+
+    // settings
+    $icon_box : 1rem;
+
+    // styles
+    .icon-box-block {
+
+        // content block
+        .icon_box_content {
+
+            @include flex-h-j-v-t( false );
+
+            margin: 0 -1rem 0 -1rem;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+                margin: 0 0 0 0;
+
+            }
+
+            // box
+            .icon_box_block {
+
+                width: 25%;
+                margin: 0 1rem 0 1rem;
+
+                // mobile
+                @include breakpoint ( medium down ) {
+
+                    width: 50%;
+
+                }
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: 100%;
+                    margin: 0 0 0 0;
+
+                }
+
+                // common
+                span {
+
+                    display: block;
+
+                }
+
+                // image
+                .icon_box_image {
+
+                    // width: 50%;
+                    margin: 0 0 1rem 0;
+                    padding: 0 4rem 0 4rem;
+
+                    // mobile
+                    @include breakpoint ( large down ) {
+
+                        padding: 0 3rem 0 3rem;
+
+                    }
+
+                    // mobile
+                    @include breakpoint ( medium down ) {
+
+                        padding: 0 1rem 0 1rem;
+
+                    }
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        width: 50%;
+
+                    }
+
+                }
+
+                // title
+                .icon_box_title {
+
+                    margin: 0 0 1rem 0;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include text( $up );
+
+                    @include typo( 1.25rem, 0.035em );
+
+                    @include color( $g140 );
+
+                }
+
+                // text
+                .icon_box_text {
+
+                    @include font( $industry, 0.875rem, 500 );
+
+                }
+
+            }
+
+        }
+
+    }

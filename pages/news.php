@@ -50,7 +50,7 @@
 
             </div>
 
-            vip news
+            news and updates
 
         </h2>
         <!-- END heading -->

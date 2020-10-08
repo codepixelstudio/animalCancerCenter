@@ -44,3 +44,23 @@
             z-index: 100000; /* Above WP toolbar */
         }
     }
+
+    // load me
+    .load_me {
+
+        visibility: hidden;
+
+        opacity: 0.000;
+
+    }
+
+    // loaded
+    .loaded {
+
+        visibility: visible;
+
+        opacity: 1.000;
+
+        transition: all 1200ms $outex 960ms;
+
+    }

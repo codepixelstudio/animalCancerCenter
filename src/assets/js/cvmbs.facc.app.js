@@ -47,7 +47,7 @@
     // functions
     site.fx = {
 
-        // scrollpage
+        loadme : $('.load_me')
 
     };
 
@@ -149,6 +149,12 @@
         // menus
         menusFX.init();
 
+        // load me
+        console.log( site.fx.loadme );
+
+        // loaded
+        site.fx.loadme.toggleClass( 'load_me loaded' );
+
         // slick that
         slideshow.slick({
 
@@ -178,6 +184,8 @@
             waitForAnimate : true
 
         });
+
+        $('#custom_billboard').addClass( 'loaded' );
 
     });
 

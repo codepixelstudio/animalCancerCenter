@@ -1,5 +1,5 @@
 
-<span id="brand-rams" class="brand-link brand-rams">
+<span id="brand-rams" class="brand-link brand-rams load_me">
 
     <svg class="brand-icon" viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
 

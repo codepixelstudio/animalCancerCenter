@@ -17,7 +17,12 @@
 	}
 
 	// setup tag cloud
-	$tags = get_tags( array( 'get' => 'all' ));
+    $tags = get_tags( array(
+
+        // 'get'         => 'all',
+        'hide_empty'  => 1
+
+    ));
 
 	// tag cloud iteration
 	foreach ( $tags as $tag ) {

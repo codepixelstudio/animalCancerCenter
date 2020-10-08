@@ -1,4 +1,4 @@
-<nav id="menu_header">
+<nav id="menu_header" class="load_me">
 
     <?php
 

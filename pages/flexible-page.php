@@ -91,6 +91,10 @@ $block_path = 'elements/blocks/flexible/';
 
 	                        get_template_part( $block_path . 'custom.menu' );
 
+						elseif ( get_row_layout() == 'icon_box' ) :
+
+	                        get_template_part( $block_path . 'icon.box' );
+
 						else:
 
 							// no blocks found

@@ -55,7 +55,7 @@
                 </div>
                 <!-- END icon -->
 
-                vip news
+                news and updates
 
             </h2>
             <!-- END heading -->

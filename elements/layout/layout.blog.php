@@ -3,7 +3,7 @@
     // setup query parameters
     $news = array(
         'post_type'      => 'post',
-        'posts_per_page' => 3
+        'posts_per_page' => 5
 
     );
 
@@ -27,7 +27,31 @@
     }
 
     // setup tag cloud
-    $tags = get_tags( array( 'get' => 'all' ));
+    $tags = get_tags( array(
+
+        'get'         => 'all',
+        'hide_empty'  => true,
+        'orderby'     => 'count',
+        'order'       => 'DESC',
+        // 'count' => true,
+        'number'      => 18
+
+    ));
+
+    // setup refined tag cloud
+    $params = array(
+
+        'smallest'      => 12,
+        'largest'       => 12,
+        'unit'          => 'px',
+        'number'        => 20,
+        'orderby'       => 'count',
+        'order'         => 'DESC',
+        'show_count'    => 0
+
+    );
+
+    // $tag_cloud = wp_generate_tag_cloud( $tags, $params );
 
     // tag cloud iteration
     foreach ( $tags as $tag ) {
@@ -71,7 +95,7 @@
 
         </div>
 
-        vip news
+        news and updates
 
     </h2>
     <!-- END heading -->
@@ -171,7 +195,7 @@
             <!-- description -->
             <p class="metadata description">
 
-                Our new blog is dedicated to sharing the latest stories from the Flint Animal Cancer Center’s Very Important Pets & People! Plus, you’ll learn more about our current clinical trials, our inspiring research, and our work to find a cure for BOTH pets and people with cancer. We invite you to follow us!
+                Our blog is dedicated to sharing the latest stories from the Flint Animal Cancer Center’s Very Important Pets & People! Plus, you’ll learn more about our current clinical trials, our inspiring research, and our work to find a cure for BOTH pets and people with cancer. We invite you to follow us!
 
             </p>
             <!-- END description -->

@@ -79,6 +79,17 @@
 
         }
 
+        // text
+        .small_text {
+
+            @include flex-h-c-v-c( false );
+
+            margin: 1rem 0 1rem 0;
+
+            @include font( $industry, 0.875rem, 500 );
+
+        }
+
         // construct
         #newsletter_signup_form_build {
 
@@ -86,10 +97,275 @@
 
         }
 
+        // demo construct
+        #newsletter_signup_form_demo {
+
+            // @include flex-v-c-h-c( false );
+            @include hide;
+
+            width: 100%;
+
+            // container
+            .gform_fields {
+
+                @include flex-h-j-v-s( false );
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include flex-v-c-h-c( false );
+
+                }
+
+                // fields
+                .gfield {
+
+                    position: relative;
+
+                    @include flex-h-j-v-s( true );
+
+                    width: 25%;
+                    margin: 0 1rem 0 1rem;
+                    padding: 0 0 0 0;
+
+                    // mobile
+                    @include breakpoint ( large down ) {
+
+                        // width: calc( 33.3333333% - 1.3333333rem );
+                        width: calc( 33.3333333% - 0.6666667rem );
+                        margin: 0 0 0 0;
+
+                    }
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        // @include flex-v-c-h-c( false );
+
+                        width: 100%;
+                        margin: 0 0 2rem 0;
+
+                        // last child
+                        &:last-child {
+
+                            margin: 0 0 1rem 0;
+
+                        }
+
+                    }
+
+                    // first name
+                    &.input_first_name {
+
+                        // label
+                        label {
+
+                            // after
+                            &:after {
+
+                                content: '\EA78';
+
+                            }
+
+                        }
+
+                    }
+
+                    // last name
+                    &.input_last_name {
+
+                        // label
+                        label {
+
+                            // after
+                            &:after {
+
+                                content: '\EB11';
+
+                            }
+
+                        }
+
+                    }
+
+                    // email
+                    &.input_email {
+
+                        // label
+                        label {
+
+                            // after
+                            &:after {
+
+                                content: '\EA2F';
+
+                            }
+
+                        }
+
+                    }
+
+                    // container
+                    .ginput_container {
+
+                        width: 100%;
+                        margin: 0 0 0 0;
+
+                    }
+
+                    // label
+                    label {
+
+                        position: absolute;
+
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        z-index: 10;
+
+                        width: 3rem;
+                        height: 3rem;
+
+                        overflow: hidden;
+
+                        text-indent: -999rem;
+
+                        // after
+                        &:after {
+
+                            @include flex-v-c-h-c( false );
+
+                            @include codicon( 3rem, 3rem, 1rem, 1rem, $campaign, '\ED71' );
+
+                            position: absolute;
+
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+
+                            z-index: 10;
+
+                            text-indent: 0;
+
+                        }
+
+                    }
+
+                    // text
+                    input[ type='text' ] {
+
+                        @include flex-h-s-v-c( false );
+
+                        width: 100%;
+                        height: 3rem;
+                        margin: 0 0 0 0;
+                        padding: 0.0625rem 1rem 0 3rem !important;
+
+                        border: none;
+
+                        @include font( $industry, 0.875rem, 500 );
+
+                        @include color( white, 0.000 );
+
+                        @include fill( white, 0.945 );
+
+                        @include shadowbox( 1rem, 3rem, black, 0.565 );
+
+                        // focus state
+                        &:focus {
+
+                            @include fill( $dark, 0.000 );
+
+                        }
+
+                        // placeholder
+                        &::placeholder {
+
+                            @include font( $industry, 0.875rem, 600 );
+
+                            @include color( white, 0.365 );
+
+                            // mobile
+                            @include breakpoint ( large down ) {
+
+                                @include font( $industry, 0.6875rem, 600 );
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // wrapper
+            .gform_wrapper {
+
+                // footer
+                .gform_footer {
+
+                    @include flex-h-c-v-c( false );
+
+                    width: 100%;
+                    margin: 2rem 0 0 0;
+                    padding: 0 0 0 0;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        margin: 0 0 0 0;
+
+                    }
+
+                    // button
+                    input[ type='submit' ] {
+
+                        @include flex-h-c-v-c( false );
+
+                        width: auto;
+                        height: 4rem;
+                        margin: 0 0 0 0;
+                        padding: 0.0625rem 1.5rem 0 1.5rem;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        @include text( $up );
+
+                        @include typo( 0.75rem, 0.035em );
+
+                        @include color( white, 0.000 );
+
+                        @include fill( $g140, 0.000 );
+
+                        @include shadowbox( 1rem, 3rem, black, 0.565 );
+
+                        transition: $all220;
+
+                        // hover state
+                        &:hover {
+
+                            @include fill( $campaign, 0.145 );
+
+                            cursor: pointer;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
         // form
         #newsletter_signup_form {
 
             @include flex-v-c-h-c( false );
+            // @include hide;
 
             width: 100%;
 
@@ -204,6 +480,58 @@
 
                     }
 
+                    // first name
+                    &.input_first_name {
+
+                        // label
+                        label {
+
+                            // after
+                            &:after {
+
+                                content: '\EA78';
+
+                            }
+
+                        }
+
+                    }
+
+                    // last name
+                    &.input_last_name {
+
+                        // label
+                        label {
+
+                            // after
+                            &:after {
+
+                                content: '\EB11';
+
+                            }
+
+                        }
+
+                    }
+
+                    // email
+                    &.input_email {
+
+                        // label
+                        label {
+
+                            // after
+                            &:after {
+
+                                content: '\EA2F';
+
+                            }
+
+                        }
+
+                    }
+
+
                     // label
                     label {
 
@@ -246,7 +574,8 @@
                 }
 
                 // text
-                input[ type='text' ] {
+                input[ type='text' ],
+                input[ type='email' ] {
 
                     @include flex-h-s-v-c( false );
 
@@ -288,6 +617,57 @@
 
                     }
 
+                    // first name
+                    &.input_first_name {
+
+                        // label
+                        label {
+
+                            // after
+                            &:after {
+
+                                content: '\EA78';
+
+                            }
+
+                        }
+
+                    }
+
+                    // last name
+                    &.input_last_name {
+
+                        // label
+                        label {
+
+                            // after
+                            &:after {
+
+                                content: '\EB11';
+
+                            }
+
+                        }
+
+                    }
+
+                    // email
+                    &.input_email {
+
+                        // label
+                        label {
+
+                            // after
+                            &:after {
+
+                                content: '\EA2F';
+
+                            }
+
+                        }
+
+                    }
+
                 }
 
             }
@@ -296,6 +676,7 @@
             #terms_fields {
 
                 @include flex-h-c-v-c( false );
+                // @include hide;
 
                 margin: 1rem 0 1rem 0;
 
@@ -395,6 +776,8 @@
             // privacy
             #policy_fields {
 
+                // @include hide;
+
                 @include font( $industry, 0.6875rem, 400  );
 
                 // links
@@ -421,6 +804,8 @@
                 margin: 2rem 0 0 0;
                 padding: 0.0625rem 1.5rem 0 1.5rem;
 
+                border: none;
+
                 @include font( $klavislim, 1rem, 400 );
 
                 @include text( $up );
@@ -434,6 +819,8 @@
                 @include shadowbox( 1rem, 3rem, black, 0.565 );
 
                 transition: $all220;
+
+                appearance: none;
 
                 // hover state
                 &:hover {

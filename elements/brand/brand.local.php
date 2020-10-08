@@ -1,6 +1,6 @@
 
 <!-- local.brand -->
-<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="brand-local">
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="brand-local" class="load_me">
 
     <div class="local_icon">
 

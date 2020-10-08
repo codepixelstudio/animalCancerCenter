@@ -1,15 +1,5 @@
         </div><!-- #content -->
 
-        <!-- gdpr consent -->
-        <div id="gdpr_consent" class="reveal" data-reveal data-overlay="false">
-
-            GDPR Consent
-
-            <p>This is a close button example.</p>
-
-        </div>
-        <!-- END gdpr consent -->
-
         <?php get_template_part( 'elements/menus/menu.site.tabs' ); ?>
 
         <?php wp_footer(); ?>
@@ -34,7 +24,7 @@
             function gtag(){dataLayer.push( arguments );}
             gtag( 'js', new Date() );
 
-            gtag( 'config', 'UA-138956035-1' );
+            gtag( 'config', 'UA-5893701-1' );
 
         </script>
 

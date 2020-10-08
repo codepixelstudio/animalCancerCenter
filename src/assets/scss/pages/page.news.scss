@@ -271,6 +271,16 @@
                 padding: 0 0 0 2.75rem;
 
                 // mobile
+                @include breakpoint ( medium only ) {
+
+                    height: 3rem;
+                    padding: 0.25rem 0 0 2.75rem;
+
+                    font-size: 2rem;
+
+                }
+
+                // mobile
                 @include breakpoint ( small only ) {
 
                     padding: 0 0 0 1.5rem;
