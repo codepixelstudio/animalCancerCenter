@@ -26,97 +26,107 @@
     </span>
     <!-- END text -->
 
-    <!-- construct -->
-    <div id="newsletter_signup_form_build">
+    <!-- load reCAPTCHA js -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-        <!-- <script type="text/javascript">
-            var loc = "http://cdwebit.cvmbs.colostate.edu/colostateedu-avuv6/pages/";
-        </script>
-        <script type="text/javascript" src="https://az124611.vo.msecnd.net/web/v10/CDWidget.js"></script>
-        <div pageID="rka4trdeeqoeqanooqtjw"></div> -->
+    <!-- reCAPTCHA callback -->
+    <script type="text/javascript">
 
-    </div>
-    <!-- END construct -->
+        function validateRecaptcha() {
 
-    <!-- construct -->
-    <div id="newsletter_signup_form_demo">
+            var response = grecaptcha.getResponse();
 
-        <?php // gravity_form( 1, false, false, true, '', true ); ?>
+            if ( response.length === 0 ) {
 
-    </div>
-    <!-- END construct -->
+                alert( 'Please check the "I am not a robot" box.' );
 
-<!-- form -->
-<form id="newsletter_signup_form" action="//analytics.clickdimensions.com/forms/h/ayQd97WXAQEuorRFKFsijP" method="post">
-<!-- <form id="newsletter_signup_form" action="//analytics.clickdimensions.com/forms/h/ayQd97WXAQEuorRFKFsijP" method="post"> -->
+                return false;
 
-    <!-- container -->
-    <div id="input_fields" class="form_fields">
+            }
 
-        <!-- wrap -->
-        <span class="input_wrap input_first_name">
+        }
 
-            <label for="First Name">first name</label>
-            <input id="First Name" class="text" type="text" name="First Name" value="" placeholder="first name" required>
+        function renderSubmit ( response ) {
 
-        </span>
-        <!-- END wrap -->
+            console.log( 'valid submission' );
 
-        <!-- wrap -->
-        <span class="input_wrap input_last_name">
+        };
 
-            <label for="Last Name">last name</label>
-            <input id="Last Name" class="text" type="text" name="Last Name" value="" placeholder="last name" required>
+    </script>
+    <!-- END reCAPTCHA callback -->
 
-        </span>
-        <!-- END wrap -->
+    <!-- form -->
+    <form id="newsletter_signup_form" action="//analytics.clickdimensions.com/forms/h/ayQd97WXAQEuorRFKFsijP" method="post" onsubmit="return validateRecaptcha();">
 
-        <!-- wrap -->
-        <span class="input_wrap input_email">
+        <!-- container -->
+        <div id="input_fields" class="form_fields">
 
-            <label for="email">e-mail address</label>
-            <input id="email" class="text" type="email" name="email" value="" placeholder="e-mail address" required>
+            <!-- wrap -->
+            <span class="input_wrap input_first_name">
 
-        </span>
-        <!-- END wrap -->
+                <label for="First Name">first name</label>
+                <input id="First Name" class="text" type="text" name="First Name" value="" placeholder="first name" required>
 
-    </div>
-    <!-- END container -->
+            </span>
+            <!-- END wrap -->
 
-    <!-- container -->
-    <div id="terms_fields" class="form_fields">
+            <!-- wrap -->
+            <span class="input_wrap input_last_name">
 
-        <input id="terms" type="checkbox" name="terms" value="">
-        <label for="terms">Yes, please add me to the CSU Animal Cancer Center mailing list.</label>
+                <label for="Last Name">last name</label>
+                <input id="Last Name" class="text" type="text" name="Last Name" value="" placeholder="last name" required>
 
-    </div>
-    <!-- END container -->
+            </span>
+            <!-- END wrap -->
 
-    <!-- privacy links -->
-    <div id="policy_fields" class="form_fields">
+            <!-- wrap -->
+            <span class="input_wrap input_email">
 
-        <a class="privacy_link" href="<?php echo home_url(); ?>/privacy-statement">
+                <label for="email">e-mail address</label>
+                <input id="email" class="text" type="email" name="email" value="" placeholder="e-mail address" required>
 
-            Privacy Statement
+            </span>
+            <!-- END wrap -->
 
-        </a>
+        </div>
+        <!-- END container -->
 
-        <!-- |
+        <!-- container -->
+        <div id="terms_fields" class="form_fields">
 
-        <a class="privacy_link" href="<?php echo home_url(); ?>/gdpr-faq">
+            <input id="terms" type="checkbox" name="terms" value="">
+            <label for="terms">Yes, please add me to the CSU Animal Cancer Center mailing list.</label>
 
-            GDPR FAQ
+        </div>
+        <!-- END container -->
 
-        </a> -->
+        <!-- privacy links -->
+        <div id="policy_fields" class="form_fields">
 
-    </div>
-    <!-- END privacy links -->
+            <a class="privacy_link" href="<?php echo home_url(); ?>/privacy-statement">
 
-    <!-- submit -->
-    <input id="newsletter_signup_submit" type="submit" value="add me to the mailing list">
+                Privacy Statement
 
-</form>
-<!-- END form -->
+            </a>
+
+        </div>
+        <!-- END privacy links -->
+
+        <!-- reCAPTCHA -->
+        <div id="reCAPTCHA" class="form_fields">
+
+            <!-- empty div -->
+            <div class="g-recaptcha" data-sitekey="6LdeTdUZAAAAAD1V5uxCo2pxr1Z_7y1DoOVC0zAR" data-theme="dark" data-callback="renderSubmit"></div>
+            <!-- END empty div -->
+
+        </div>
+        <!-- END reCAPTCHA -->
+
+        <!-- submit -->
+        <input id="newsletter_signup_submit" type="submit" value="add me to the mailing list">
+
+    </form>
+    <!-- END form -->
 
 </section>
 <!-- END newsletter -->

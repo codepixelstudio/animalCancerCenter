@@ -795,6 +795,13 @@
 
             }
 
+            // reCAPTCHA
+            #reCAPTCHA {
+
+                margin: 2rem 0 0 0;
+
+            }
+
             // button
             #newsletter_signup_submit {
 
@@ -821,6 +828,8 @@
                 transition: $all220;
 
                 appearance: none;
+
+                // @include hide;
 
                 // hover state
                 &:hover {

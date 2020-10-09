@@ -40,12 +40,12 @@ export var menusFX = {
     init: function ( render ) {
 
         // check in
-        console.log(
+        // console.log(
 
-            '%c[ %cmenusFX %c] %cscript%c.%cinitialized',
-            log.brack, log.activ, log.brack, log.init, log.brack, log.brite
+            // '%c[ %cmenusFX %c] %cscript%c.%cinitialized',
+            // log.brack, log.activ, log.brack, log.init, log.brack, log.brite
 
-        );
+        // );
 
         menu   = site.ui.menus.navigation.component;
         button = site.ui.menus.navigation.controller;

@@ -150,7 +150,7 @@
         menusFX.init();
 
         // load me
-        console.log( site.fx.loadme );
+        // console.log( site.fx.loadme );
 
         // loaded
         site.fx.loadme.toggleClass( 'load_me loaded' );
