@@ -32,31 +32,17 @@
     <!-- reCAPTCHA callback -->
     <script type="text/javascript">
 
-        function validateRecaptcha() {
+        function onSubmit(token) {
 
-            var response = grecaptcha.getResponse();
-
-            if ( response.length === 0 ) {
-
-                alert( 'Please check the "I am not a robot" box.' );
-
-                return false;
-
-            }
+            document.getElementById("newsletter_signup_form").submit();
 
         }
-
-        function renderSubmit ( response ) {
-
-            console.log( 'valid submission' );
-
-        };
 
     </script>
     <!-- END reCAPTCHA callback -->
 
     <!-- form -->
-    <form id="newsletter_signup_form" action="//analytics.clickdimensions.com/forms/h/ayQd97WXAQEuorRFKFsijP" method="post" onsubmit="return validateRecaptcha();">
+    <form id="newsletter_signup_form" action="//analytics.clickdimensions.com/forms/h/ajV5r9WE8zUCPi7F71du3F" method="post" >
 
         <!-- container -->
         <div id="input_fields" class="form_fields">
@@ -112,18 +98,8 @@
         </div>
         <!-- END privacy links -->
 
-        <!-- reCAPTCHA -->
-        <div id="reCAPTCHA" class="form_fields">
-
-            <!-- empty div -->
-            <div class="g-recaptcha" data-sitekey="6LdeTdUZAAAAAD1V5uxCo2pxr1Z_7y1DoOVC0zAR" data-theme="dark" data-callback="renderSubmit"></div>
-            <!-- END empty div -->
-
-        </div>
-        <!-- END reCAPTCHA -->
-
         <!-- submit -->
-        <input id="newsletter_signup_submit" type="submit" value="add me to the mailing list">
+        <button id="newsletter_signup_submit" class="g-recaptcha" data-sitekey="6LfHi9YZAAAAAEpNXtVCcE3A8GBOXolCkb-ZC6v9" data-callback='onSubmit' data-action='submit'>add me to the mailing list</button>
 
     </form>
     <!-- END form -->
