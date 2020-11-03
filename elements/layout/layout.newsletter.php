@@ -56,7 +56,7 @@
     <!-- END reCAPTCHA callback -->
 
     <!-- form -->
-    <form id="newsletter_signup_form" action="//analytics.clickdimensions.com/forms/h/ayQd97WXAQEuorRFKFsijP" method="post" onsubmit="return validateRecaptcha();">
+    <form id="newsletter_signup_form" action="//analytics.clickdimensions.com/forms/h/ajV5r9WE8zUCPi7F71du3F" method="post" onsubmit="return validateRecaptcha();">
 
         <!-- container -->
         <div id="input_fields" class="form_fields">
