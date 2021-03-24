@@ -27,16 +27,20 @@
     }
 
     // setup tag cloud
-    $tags = get_tags( array(
+    $tags = get_tags(
 
-        'get'         => 'all',
-        'hide_empty'  => true,
-        'orderby'     => 'count',
-        'order'       => 'DESC',
-        // 'count' => true,
-        'number'      => 18
+        array(
 
-    ));
+            'get'         => 'all',
+            'hide_empty'  => true,
+            'orderby'     => 'count',
+            'order'       => 'DESC',
+            // 'count' => true,
+            'number'      => 18
+
+        )
+
+    );
 
     // setup refined tag cloud
     $params = array(
@@ -51,8 +55,6 @@
 
     );
 
-    // $tag_cloud = wp_generate_tag_cloud( $tags, $params );
-
     // tag cloud iteration
     foreach ( $tags as $tag ) {
 
@@ -61,6 +63,9 @@
         $tag_list .= '<a href="' . $tag_link . '" class="taxonomy_item">' . $tag->name . '</a>';
 
     }
+
+    // custom blog text
+    $blog_options = get_field( 'blog_options' );
 
 ?>
 
@@ -95,7 +100,19 @@
 
         </div>
 
-        news and updates
+        <?php
+
+            if ( $blog_options[ 'title' ] ) {
+
+                echo $blog_options[ 'title' ];
+
+            } else {
+
+                echo 'news and updates';
+
+            }
+
+        ?>
 
     </h2>
     <!-- END heading -->
@@ -195,7 +212,19 @@
             <!-- description -->
             <p class="metadata description">
 
-                Our blog is dedicated to sharing the latest stories from the Flint Animal Cancer Center’s Very Important Pets & People! Plus, you’ll learn more about our current clinical trials, our inspiring research, and our work to find a cure for BOTH pets and people with cancer. We invite you to follow us!
+                <?php
+
+                    if ( $blog_options[ 'description' ] ) {
+
+                        echo $blog_options[ 'description' ];
+
+                    } else {
+
+                        echo 'Our blog is dedicated to sharing the latest stories from the Flint Animal Cancer Center’s Very Important Pets & People! Plus, you’ll learn more about our current clinical trials, our inspiring research, and our work to find a cure for BOTH pets and people with cancer. We invite you to follow us!';
+
+                    }
+
+                ?>
 
             </p>
             <!-- END description -->
