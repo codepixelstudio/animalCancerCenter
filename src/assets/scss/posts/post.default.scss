@@ -136,6 +136,45 @@
 
             }
 
+            // video
+            .responsive-embed {
+
+                @include flex-h-c-v-c( false );
+
+                // iframe
+                iframe {
+
+                    // width: 50%;
+
+                    margin: 1rem auto 2rem auto;
+
+                }
+
+            }
+
+            // images
+            img {
+
+                // right
+                &.alignright {
+
+                    float: right;
+
+                    margin: 0 0 1rem 2rem;
+
+                }
+
+                // left
+                &.alignleft {
+
+                    float: left;
+
+                    margin: 0 2rem 1rem 0;
+
+                }
+
+            }
+
             // text
             p {
 
