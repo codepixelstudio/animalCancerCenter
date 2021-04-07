@@ -61,7 +61,7 @@
 
     <?php get_template_part( 'elements/layout/layout.blog' ); ?>
 
-    <?php get_template_part( 'elements/layout/layout.newsletter' ); ?>
+    <?php // get_template_part( 'elements/layout/layout.newsletter' ); ?>
 
     <?php get_template_part( 'elements/layout/layout.footer' ); ?>
 
