@@ -98,6 +98,6 @@ $block_path = 'elements/blocks/layered/';
 
 <?php get_footer(); ?>
 
-<?php get_template_part( 'elements/layout/layout.newsletter' ); ?>
+<?php // get_template_part( 'elements/layout/layout.newsletter' ); ?>
 
 <?php get_template_part( 'elements/layout/layout.footer' ); ?>

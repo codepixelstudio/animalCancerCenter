@@ -116,7 +116,7 @@ $block_path = 'elements/blocks/flexible/';
 
 </div><!-- #primary -->
 
-<?php get_template_part( 'elements/layout/layout.newsletter' ); ?>
+<?php // get_template_part( 'elements/layout/layout.newsletter' ); ?>
 
 <?php get_template_part( 'elements/layout/layout.footer' ); ?>
 
